@@ -1,14 +1,14 @@
 @font-face {
-  font-family: "Segoe UI";
-  src: local("Segoe UI") format("truetype"), url("https://takosthings.github.io/Fluent-Discord-Fonts/segoeui.ttf") format("truetype");
+  font-family: "Roboto";
+  src: local("Roboto") format("truetype"), url("https://fonts.googleapis.com/css2?family=Roboto&display=swap") format("truetype");
 }
 @font-face {
   font-family: "Segoe Fluent Icons";
   src: local("Segoe Fluent Icons"), url("https://takosthings.github.io/Fluent-Discord-Fonts/Segoe-Fluent-Icons.ttf") format("truetype");
 }
 :root {
-  --font-primary: "Segoe UI", "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
-  --font-display: "Segoe UI", "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
+  --font-primary: "Roboto, "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
+  --font-display: "Roboto", "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
   --font-code: Consolas, Menlo, Monaco, "Courier New", monospace;
 }
 
