@@ -7,7 +7,7 @@
   src: local("Segoe Fluent Icons"), url("https://takosthings.github.io/Fluent-Discord-Fonts/Segoe-Fluent-Icons.ttf") format("truetype");
 }
 :root {
-  --font-primary: "Roboto, "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
+  --font-primary: "Roboto", "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
   --font-display: "Roboto", "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
   --font-code: Consolas, Menlo, Monaco, "Courier New", monospace;
 }
