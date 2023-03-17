@@ -6,7 +6,7 @@
 
 **Commit**
 - [ ] Commit `/src/modules/core/metadata` only
-- [ ] Commit message is `Bump version > 1.1.*`
+- [ ] Commit message is `Bump version > 1.7.*`
 
 **Actions**
 - [ ] Run make-release
@@ -14,13 +14,16 @@
 **Release**
 - [ ] Correct tag version
 - [ ] Correct version in title
-- [ ] Release body is
+- [ ] Example release body:
 ```
-## What's Changed
-[Full Changelog](https://github.com/TakosThings/Fluent-Discord/compare/v1.0.0...v1.1.0)
+Highlights:
+* Merge PR # by @ - Description
+* HIGHLIGHT
+
+[Full Changelog](https://github.com/TakosThings/Fluent-Discord/compare/v1.7.0...v1.7.*)
 ```
 - [ ] Ensure version numbers to compare are correct
-- [ ] Add highlights of any major changes (if any)
+- [ ] Contributors to merged PRs are credited
 - [ ] CSS files are uploaded
 
 **Issues**

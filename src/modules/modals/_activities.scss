@@ -1,0 +1,43 @@
+.theme-dark .root-CyPAbQ{
+    margin-top: 0;
+    background-color: transparent;
+
+    .shelfTopBackground-R55ED9{
+        display: none;
+    }
+
+    // Header
+    .headerTextContainer-16tB2v{
+        align-items: unset;
+    }
+    .activityShelfTitle-1rkbSI{
+        justify-content: unset;
+        .heading-xl-extrabold-3nqyla{
+            @include TypeSubtitle;
+        }
+    }
+    .text-sm-normal-AEQz4v{
+        margin-top: 4px;
+    }
+
+    // Content
+    .scrollTierBackground-BnWR8k{
+        background-color: $LayerFillColorAlt;
+    }
+
+    .activityItem-1Z9CTr{
+        background-color: $CardBackgroundFillColorDefault;
+    }
+    .activityTitleText-3LZ9o5{
+        @include TypeBodyStrong;
+    }
+    .activitySubtitleText-r0WHTk{
+        @include TypeCaption;
+    }
+    .activityTag-3C3YK5{
+        padding: 2px 8px;
+        background-color: $SystemFillColorSolidNeutralBackground;
+        @include TypeCaption;
+        color: $TextFillColorSecondary !important; // Override inline
+    }
+}

@@ -1,10 +1,33 @@
 .theme-dark .container-1zzFcN{
-    border-top: 1px solid $DividerStrokeColorDefault;
-    border-bottom: 1px solid $DividerStrokeColorDefault;
+    background-color: transparent;
+    border-top: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+
+    // Connection status/disconnect
+    .connection-3k9QeF{
+        height: 32px;
+    }
+    .rtcConnectionStatus-c5A6Av{
+        padding-bottom: 0;
+        @include TypeBody;
+        .button-ejjZWC{
+            line-height: 16px;
+        }
+    }
+    .subtext-2HDqJ7{
+        @include TypeCaption;
+    }
+    .voiceUsers-3gPcwY{
+        padding-top: 4px;
+    }
 
     // Video/screen share buttons
     .actionButtons-2vEOUh{
         grid-gap: 4px;
+        // Applying our own grid template to cheat the size of the activity button so it has the same spacing as the buttons above and below it, and saves removing a bunch of needed width from the channels pane
+        grid-template-columns: 68px 80px 68px;
+        // !importants to make these appear as 'default' button instead of accent
         button{
             min-width: unset;
             background-color: $ControlFillColorDefault !important;
@@ -18,7 +41,7 @@
                 background-color: $ControlFillColorTertiary !important;
             }
 
-            .contents-3ca1mk{
+            .contents-3NembX{
                 font-size: 0;
                 svg{
                     margin-right: 0;
@@ -34,7 +57,9 @@
 
 // Streaming game/app
 .theme-dark .activityPanel-9icbyU{
-    border-top: 1px solid $DividerStrokeColorDefault;
+    background-color: transparent;
+    padding-bottom: 0;
+    border-top: 0;
     border-bottom: 0;
     .title-338goq{
         @include TypeBody;
@@ -53,7 +78,7 @@ html[lang^="en-"].theme-dark .panels-3wFtMD .button-1EGGcP{
         @include FontIconFluent;
         font-size: 16px;
     }
-    .contents-3ca1mk{
+    .contents-3NembX{
         display: none;
     }
 }

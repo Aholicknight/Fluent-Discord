@@ -1,3 +1,24 @@
+// Sidebar
+// Changelog button
+.bd-changelog-button{
+    width: 32px;
+    height: 32px !important; // Override precedence
+    padding: 6px;
+    border-width: 1px;
+    border-style: outset;
+    border-color: transparent;
+    color: $TextFillColorPrimary;
+    border-radius: 4px;
+    &:hover{
+        cursor: pointer;
+        background-color: $ControlFillColorSecondary;
+        border-color: $ControlElevationBorder;
+    }
+    &:active{
+        background-color: $ControlFillColorTertiary;
+    }
+}
+
 // Settings
 .theme-dark .bd-settings-group{
     margin-bottom: 16px;
@@ -45,6 +66,25 @@
     }
     .bd-setting-divider{
         display: none;
+    }
+
+    // Updates page
+    .bd-empty-updates{
+        padding: 10px 16px;
+        background-color: $CardBackgroundFillColorSecondary;
+        @include TypeBody;
+        border: 1px solid $CardStrokeColorDefault;
+        border-top: 0;
+        border-radius: 0 0 4px 4px;
+        svg{
+            margin-bottom: 8px;
+        }
+    }
+
+    // Add notes to some options
+    label[for="transparency"]::after{
+        content: " (Fluent Discord - This option isn't supported, and may be disabled)";
+        color: $TextFillColorDisabled;
     }
 }
 

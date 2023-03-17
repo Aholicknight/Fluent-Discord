@@ -5,7 +5,6 @@
 
 .theme-dark .container-2o3qEW{
     background-color: $LayerFillColorDefault;
-    border-left: 1px solid $CardStrokeColorDefault;
 
     .members-3WRCEx,
     .members-3WRCEx > div{
@@ -14,7 +13,7 @@
 
     // Group header
     .membersGroup-2eiWxl{
-        padding: 20px 8px 0 16px;
+        padding: 20px 8px 0 15px;
     }
     .container-q97qHp{
         color: $TextFillColorPrimary;
@@ -25,6 +24,7 @@
 
     // Member
     .container-1oeRFJ{
+        margin-left: 7px;
         color: $TextFillColorPrimary;
         // Greyscale offline avatars
         &.offline-22aM7E{
@@ -71,15 +71,6 @@
             opacity: 1;
             transition: transform 250ms Cubic-bezier(0.55,0.55,0,1),
                         opacity 250ms Cubic-bezier(0.55,0.55,0,1);
-        }
-    }
-    // Avatar
-    .avatar-6qzftW{
-        foreignObject{
-            mask: none;
-        }
-        .avatar-b5OQ1N{
-            border-radius: 50%;
         }
     }
     // Username

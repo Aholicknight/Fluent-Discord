@@ -1,34 +1,34 @@
 .theme-dark{
+    // Backdrop
     .backdrop-2ByYRN{
-        background: $SmokeFillColorDefault !important;
-        opacity: 1 !important;
+        background: $SmokeFillColorDefault !important; // Override inline
+        opacity: 1 !important; // Override inline
     }
 
-    // Modal body
-    .root-g14mjS{
+    // Body
+    .root-1CAIjD{
         background-color: $SolidBackgroundFillColorBase;
         border: 1px solid $SurfaceStrokeColorDefault;
         border-radius: 8px;
     }
 
-    // Header
-    .header-1zd7se, // eg. notification settings
-    .header-o8wV_s, // eg. create channel
+    // Headers
+    .header-1ffhsl, // eg. notification settings
     .header-1LEkUo, // eg. change password
     .header-1kWa4s, // eg. change username
     .header-1R3myj{ // eg. edit email
-        background-color: $CardBackgroundFillColorDefault;
         padding: 24px;
+        background-color: $LayerFillColorAlt;
+        border-radius: 8px 8px 0 0;
         align-items: unset;
-        .wrapper-1HSdhi, // eg. notification settings
-        .modalTitle-3_QDTE, // eg. create channel
+        .heading-lg-semibold-14ouVv, // eg. notification settings
         .title-2tnl9d, // eg. change password
         .title-3JPglK, // eg. change username
         .title-3VYtQS{ // eg. edit email
             @include TypeSubtitle;
             text-align: left;
         }
-        .guildName-1kreI8, // eg. notification settings
+        .text-md-normal-2rFCH3, // eg. notification settings
         .subtitle-3sUbvY, // eg. change password
         .subtitle-36U6vW, // eg. change username
         .subtitle-3Kkhfr{ // eg. edit email
@@ -36,55 +36,63 @@
             color: $TextFillColorPrimary;
             text-align: left;
         }
-    }
 
-    // Remove close buttons
-    .close-1mLglB{
-        display: none;
-    }
-
-    // Divider
-    .divider-3APUjw{
-        display: none;
-    }
-    // Privacy settings
-    // Removes border between header and body
-    .theme-dark .separator-2lLxgC{
-        box-shadow: none;
-    }
-
-    // Body
-    .content-2hZxGK{
-        padding: 0 24px 24px 24px;
-        background-color: $CardBackgroundFillColorDefault;
-        // NOTE: 2021-07-05 - For some reason they sometimes place a padding-right in-line (see: Disable 2FA modal)
-        &[style*="padding-right"]{
-            padding-right: 24px !important;
+        // Remove divider line in notification settings
+        &.separator-3C440w{
+            box-shadow: none;
         }
-        // Removes memay from the ban user modal
+    }
+
+    // Content
+    .content-1OG56Q{
+        padding-right: 24px !important;
+        padding-left: 24px;
+        background-color: $LayerFillColorAlt;
+        border-bottom: 1px solid $CardStrokeColorDefault;
+        border-radius: 0;
+
         video{
             display: none;
         }
     }
 
     // Footer
-    .footer-31IekZ{
+    .footer-IubaaS{
+        padding: 24px;
         background-color: transparent;
-        box-shadow: none;
-        .button-f2h6uQ{
+
+        // Remove divider line in notification settings
+        &.footerSeparator-3U8YsT{
+            box-shadow: none;
+        }
+
+        // Add gap between buttons
+        .button-ejjZWC{
             margin-left: 8px;
         }
     }
+}
 
+.theme-dark{
     // Special cases
-    // Create channel - remove extra margin added to the header
-    .header-o8wV_s{
-        margin: 0;
+    // Remove images from headers
+    // screenshare
+    .art-1TvEXv{
+        display: none;
+    }
+    // activities
+    .shelfTopBackground-R55ED9{
+        display: none;
+    }
+    // Verify email
+    .headerImage-2osrlm{
+        display: none;
     }
 
-    // Close button
-    .closeButton-32emop{
-        top: 24px;
-        right: 24px;
+    // Create channel modal
+    // Modal has a bunch of rubbish inline CSS...
+    .modal-1Kmy_E.root-1CAIjD.small-2xUY-3.fullscreenOnMobile-2971EC[style="opacity: 1; transform: scale(1);"]{
+        max-height: unset !important;
+        min-height: unset !important;
     }
 }

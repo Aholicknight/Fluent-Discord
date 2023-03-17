@@ -1,34 +1,36 @@
 .theme-dark .chat-2ZfjoI .search-39IXmY{
-    margin: 0;
+    margin: 0 4px 0 0;
     .searchBar-jGtisZ{
-        width: 64px;
-        height: 36px;
+        width: 60px;
+        height: 32px;
         background-color: transparent;
         background-position: center;
         background-repeat: no-repeat;
         background-size: 20px;
         border-radius: 4px;
         cursor: pointer;
+        transition: background-color $AnimationFadeInOut;
         &:hover{
             background-color: $ControlFillColorSecondary;
+            transition: background-color $AnimationFadeInOut;
         }
         .public-DraftEditorPlaceholder-root,
         .icon-tZMHgY{
             display: none;
         }
         .icon-tZMHgY{
-            margin-top: 6px;
+            margin-top: 2px;
         }
     }
 
     // Icon when not active
     .search-2Mwzzq:not(.focused-1xh-wG):not(.open-1F8u2c)::before{
         content: "\e721"; // Search
-        width: 64px;
+        width: 60px;
         font-size: 16px;
         @include FontIconFluent;
         text-align: center;
-        line-height: 36px;
+        line-height: 32px;
         vertical-align: middle;
         position: absolute;
     }
@@ -38,7 +40,7 @@
     .search-2Mwzzq.popout-open .searchBar-jGtisZ{
         width: 232px;
         height: 32px;
-        margin: 0 4px;
+        margin: 0;
         background-color: $ControlFillColorDefault;
         background-image: none;
         cursor: text;
@@ -62,6 +64,7 @@
         height: 26px;
     }
     .search-2Mwzzq .searchBar-jGtisZ .DraftEditor-root{
+        width: 100%;
         color: $TextFillColorPrimary;
         @include TypeBody;
         .public-DraftEditor-content{
@@ -72,6 +75,11 @@
             padding: 3px 8px 0;
             box-sizing: border-box;
         }
+    }
+    // Add margin to textarea when open/focused so text doesn't appear over the search/clear icon
+    .search-2Mwzzq.open-1F8u2c .searchBar-jGtisZ .DraftEditor-root,
+    .search-2Mwzzq.focused-1xh-wG .searchBar-jGtisZ .DraftEditor-root{
+        margin-right: 32px;
     }
     .seasearch-2Mwzzqrch .searchBar-jGtisZ .public-DraftEditorPlaceholder-root{
         color: $TextFillColorSecondary;
@@ -86,5 +94,13 @@
         background-color: $TextFillColorPrimary;
         color: #000;
         font-weight: normal;
+    }
+
+    // Search/clear icon in textarea
+    .iconContainer-1RqWJj{
+        // Flip eyeglass icon so the handle is the same side as the Fluent icon
+        &:first-child{
+            transform: rotateZ(90deg);
+        }
     }
 }

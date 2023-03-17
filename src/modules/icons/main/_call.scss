@@ -1,4 +1,4 @@
-html[lang^="en-"].theme-dark .wrapper-1gVUIN .controlSection-1mNixL .button-f2h6uQ{
+html[lang^="en-"].theme-dark .wrapper-1gVUIN .controlSection-1mNixL .button-ejjZWC{
     &[aria-label*="Camera"]::before,
     &[aria-label*="Join Video Call"]::before{
         content: "\E156"; // WebCam
@@ -24,10 +24,31 @@ html[lang^="en-"].theme-dark .wrapper-1gVUIN .controlSection-1mNixL .button-f2h6
     &[aria-label="Join Call"]::before{
         content: "\E13A"; // Phone
     }
+    &[aria-label="Dismiss"]::before{
+        // There's no Call Reject icon, so have to reuse
+        content: "\E137"; // HangUp
+    }
     &[aria-label="Start an Activity"]::before{
         content: "\EA86"; // Puzzle
     }
     &[aria-label="Leave Activity"]::before{
         content: "\E137"; // HangUp
+    }
+
+    &[aria-label="Hide chat"]::before{
+        content: "\E70D"; // ChevronDown
+    }
+    &[aria-label="Show chat"]::before{
+        content: "\E70D"; // ChevronDown
+    }
+
+    &[aria-label="Pop Out"]::before{
+        content: "\E17C"; // NewWindow
+    }
+    &[aria-label="Full Screen"]::before{
+        content: "\E1D9"; // FullScreen
+    }
+    &[aria-label="Exit Full Screen"]::before{
+        content: "\E1D8"; // BackToWindow
     }
 }

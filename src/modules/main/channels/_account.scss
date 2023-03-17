@@ -2,6 +2,21 @@
 .theme-dark .panels-3wFtMD{
     background-color: transparent;
 
+    // Remove 1px margin from bottom of panel
+    .container-YkUktl{
+        background-color: transparent;
+        height: 48px;
+        margin-bottom: 0;
+    }
+
+    // Remove margin on avatar/username wrapper
+    .avatarWrapper-1B9FTW{
+        margin-right: 0;
+        &:hover{
+            background-color: transparent;
+        }
+    }
+
     .button-12Fmur{
         margin-left: 4px;
         background-color: $ControlFillColorDefault;
@@ -14,11 +29,17 @@
         &:active{
             background-color: $ControlFillColorTertiary;
         }
-        .contents-3ca1mk{ // Non-EN sizing fix
+        .contents-3NembX{ // Non-EN sizing fix
             svg{
+                position: absolute;
+                top: 7px;
+                left: 7px;
                 width: 16px;
                 height: 16px;
             }
+        }
+        &:first-child{
+            margin-left: 0;
         }
 
         // Make muted buttons red
@@ -31,7 +52,7 @@
 
 // Icon replacements
 html[lang^="en-"].theme-dark .panels-3wFtMD{
-    :not(.button-1EGGcP, .rtcConnectionStatusLabel-Nodt6L) > .contents-3ca1mk{
+    :not(.button-1EGGcP, .rtcConnectionStatusLabel-Nodt6L) > .contents-3NembX{
         display: none;
     }
     .button-12Fmur{

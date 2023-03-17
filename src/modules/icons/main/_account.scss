@@ -21,10 +21,10 @@ html[lang^="en-"].theme-dark .panels-3wFtMD .button-12Fmur{
     &[aria-label="#{map-get($translate, MUTE)}"][aria-checked=false]::before{
         content: "\E720"; // Microphone
     }
-    &[aria-label="#{map-get($translate, USER_SETTINGS)}" i]::before{
+    &[aria-label^="#{map-get($translate, USER_SETTINGS)}" i]::before{
         content: "\E713"; // Settings
     }
-    &[aria-label="#{map-get($translate, USER_SETTINGS)}" i]{
+    &[aria-label^="#{map-get($translate, USER_SETTINGS)}" i]{
         &:hover{
             &::before{
                 animation: fluent-setting-rot 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
@@ -44,7 +44,9 @@ html[lang^="en-"].theme-dark .panels-3wFtMD .button-12Fmur{
     }
 
     // Streaming
-    &[aria-label*="#{map-get($translate, ACTIVITY_PANEL_GO_LIVE_STREAM_GAME)}"]::before{
+    &[aria-label*="#{map-get($translate, ACTIVITY_PANEL_GO_LIVE_STREAM_GAME)}"]::before,
+    &[aria-label*="Go Live"]::before,
+    &[aria-label*="Navigate to a server to start streaming."]::before{
         content: "\EBC6"; // Project
     }
     &[aria-label="#{map-get($translate, STOP_STREAMING)}"]::before{

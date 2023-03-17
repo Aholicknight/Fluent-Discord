@@ -24,6 +24,12 @@ html[lang^="en-"].theme-dark .toolbar-3_r2xA{
             content: "\E716"; // People
         }
 
+        // User profile (DM)
+        &[aria-label="Hide User Profile"]::before,
+        &[aria-label="Show User Profile"]::before{
+            content: "\E136"; // Contact Info
+        }
+
         // Mail
         &[aria-label="#{map-get($translate, INBOX)}"]::before{
             content: "\E715"; // Mail
@@ -82,6 +88,10 @@ html[lang^="en-"].theme-dark .toolbar-3_r2xA{
         &[aria-label="#{map-get($translate, GROUP_DM_ADD_FRIENDS)}" i]::before{
             content: "\E902"; // Group
         }
+        // Join call
+        &[aria-label="Join Voice Call" i]::before{
+            content: "\E77E"; // IncomingCall
+        }
 
         // Stage channel
         &[aria-label="#{map-get($translate, STAGE_SETTINGS)}" i]::before{
@@ -94,7 +104,7 @@ html[lang^="en-"].theme-dark .toolbar-3_r2xA{
             content: "\E163"; // Calendar
         }
     }
-    .button-f2h6uQ{
+    .button-ejjZWC{
         // Call tiles
         // Focus
         &[aria-label="#{map-get($translate, VIDEO_CALL_AUTO_SELECT)}"]::before,
@@ -107,4 +117,3 @@ html[lang^="en-"].theme-dark .toolbar-3_r2xA{
         }
     }
 }
-

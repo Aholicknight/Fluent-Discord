@@ -15,7 +15,7 @@
         display: none;
     }
 
-    .interactive-1vLZ_I{
+    .interactive-iyXY_x{
         &:hover,
         &:focus-within{
             background-color: $SubtleFillColorSecondary;
@@ -24,23 +24,12 @@
                 color: $TextFillColorPrimary;
             }
         }
-        &.selected-3veCBZ{
+        &.selected-26oxtA{
             background-color: $SubtleFillColorSecondary;
         }
 
         .layout-1LjVue{
             padding: 0 8px;
-        }
-
-        // Avatar
-        .avatar-1HDIsL{
-            width: 24px;
-            height: 24px;
-            margin-right: 8px;
-        }
-        .wrapper-1VLyxH{
-            width: 24px !important;
-            height: 24px !important;
         }
 
         // Name
@@ -52,6 +41,21 @@
         .activityText-ev7Z1T{
             @include TypeCaption;
             color: $TextFillColorSecondary;
+        }
+    }
+
+    // DMs header
+    .privateChannelsHeaderContainer-1UWASm{
+        color: $TextFillColorPrimary;
+        @include TypeBody;
+        text-transform: none;
+    }
+
+    // Remove store and discovery tabs
+    .channel-1Shao0{
+        &[href="/store"],
+        &[href="/discovery"]{
+            display: none;
         }
     }
 }

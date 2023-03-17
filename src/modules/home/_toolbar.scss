@@ -24,7 +24,7 @@
                 background-color: transparent;
                 color: $TextFillColorSecondary;
             }
-            &.selected-g-kMVV{
+            &.selected-1sf9UK{
                 background-color: transparent;
                 &::before{
                     content: "";
@@ -37,22 +37,10 @@
                 }
             }
             // Add friend button
-            &[style]{
-                background-color: transparent !important; // why though
-                &:hover{
-                    color: $TextFillColorSecondary !important;
-                }
-                &[aria-selected=true]{
-                    color: $TextFillColorPrimary !important;
-                    &::before{
-                        content: "";
-                        position: absolute;
-                        width: 100%;
-                        height: 3px;
-                        background-color: $AccentLight1;
-                        border-radius: 2px;
-                        bottom: 2px;
-                    }
+            &.addFriend-emTWY1{
+                background-color: transparent;
+                &.selected-1sf9UK{
+                    color: $TextFillColorPrimary;
                 }
             }
 

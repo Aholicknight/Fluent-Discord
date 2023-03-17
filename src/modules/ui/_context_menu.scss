@@ -1,8 +1,9 @@
-.theme-dark .menu-1QACrS{
-    min-width: 240px;
-    background-color: rgba($color: #2d2d2d, $alpha: .93);
-    border: 1px solid $SurfaceStrokeColorFlyout;
-    border-radius: 4px;
+.theme-dark .menu-2TXYjN{
+    min-width: 280px;
+    background: $AcrylicBackgroundFillColorDefault;
+    border: 1px solid $SurfaceStrokeColorDefault;
+    border-radius: 8px;
+    @include Elevation32;
     position: relative;
 
     &::before{
@@ -12,36 +13,38 @@
         position: absolute;
         top: 0;
         left: 0;
-        backdrop-filter: blur(10px);
-        border-radius: 4px;
+        backdrop-filter: blur(8px);
+        border-radius: 8px;
     }
 
-    .scroller-1bVxF5{
-        // padding: 0 8px;
+    .scroller-nxCRu_{
+        padding: 4px 8px;
         max-height: calc(100vh - 64px);
     }
 
     // Separators
-    .separator-1So4YB{
+    .separator-12G2Op{
         margin: 10px 4px;
         border-bottom-color: $DividerStrokeColorDefault;
     }
 
     // Item
-    .item-1OdjEX{
+    .item-5ApiZt{
         min-height: 34px;
         margin: 2px 0 2px -4px;
-        padding: 0 12px;
+        padding: 4px 12px;
         border-radius: 4px;
         @include TypeBody;
         color: $TextFillColorPrimary;
-        &.focused-3qFvc8{
-            background-color: $CardBackgroundFillColorSecondary;
+        transition: background-color $AnimationFadeInOut;
+        &.focused-3LIdPu{
+            background-color: $SubtleFillColorSecondary;
+            transition: background-color $AnimationFadeInOut;
         }
-        &.colorDanger-3n-KnP{
+        &.colorDanger-3umuSx{
             color: $SystemFillColorCritical;
         }
-        &.disabled-oOAXat{
+        &.disabled--8Sav3{
             color: $TextFillColorDisabled;
             opacity: 1;
         }
@@ -56,7 +59,7 @@
         // Remove subtext on Spotify menu items
         &[id*="spotify"],
         &[id*="listen"]{
-            .subtext-2GlkbE{
+            .subtext-1mqKVB{
                 display: none;
             }
         }
@@ -72,7 +75,7 @@
         }
 
         // Items with subtext
-        .subtext-2GlkbE{
+        .subtext-1mqKVB{
             margin-top: 0;
             @include TypeCaption;
             color: $TextFillColorSecondary;
@@ -82,8 +85,8 @@
         }
 
         // Remove Discord icons, unless it's a checkbox
-        &:not([role="menuitemcheckbox"]){
-            .icon-E4cW1l{
+        &:not([role="menuitemcheckbox"]):not([role="menuitemradio"]){
+            .icon-3XHs8t{
                 display: none;
             }
         }
@@ -91,15 +94,20 @@
         .optionIcon-1Ft8w0{
             display: none;
         }
+
+        // Fix grabber position
+        .grabber-3R-Rx9{
+            margin-top: -0px;
+        }
     }
 
     // Emoji items
     .button-1zW0-r{
         width: 24px;
         height: 24px;
-        background-color: $CardBackgroundFillColorSecondary;
+        background-color: transparent;
         &.focused-H4w81f{
-            background-color: $CardBackgroundFillColorSecondary;
+            background-color: $SubtleFillColorSecondary;
             box-shadow: none;
         }
         .icon-Yl4xbA{
@@ -109,45 +117,10 @@
         }
     }
 
-    // Volume slider
-    .sliderContainer-2nidiS{
-        padding: 0;
-    }
-    .slider-1NC-Gf.mini-2qY9iv{
-        .bar-1Bhnl9{
-            height: 3px;
-            background-color: $ControlStrongStrokeColorDefault;
-            border-radius: 2px;
-        }
-        .barFill-2Bh7CX{
-            height: 3px;
-            position: absolute;
-            background-color: $AccentBase;
-            border-radius: 2px;
-        }
-        .grabber-2GQyvM{
-            width: 12px;
-            height: 12px;
-            margin-top: -1px;
-            background-color: $AccentBase;
-            border: 4px solid #454545;
-            &:hover{
-                width: 14px;
-                height: 14px;
-                border: 3px solid #454545;
-            }
-            &:active{
-                width: 10px;
-                height: 10px;
-                border: 5px solid #454545;
-            }
-        }
-    }
-
     .submenu-1apzyU{
         min-width: 240px;
-        background-color: rgba($color: #2d2d2d, $alpha: .95);
-        border: 1px solid $SurfaceStrokeColorFlyout;
+        background-color: $AcrylicBackgroundFillColorDefault;
+        border: 1px solid $SurfaceStrokeColorDefault;
         position: relative;
         &::before{
             content: "";
@@ -156,7 +129,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(8px);
         }
     }
 }

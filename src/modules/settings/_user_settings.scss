@@ -21,25 +21,29 @@
     .accountProfileCard-lbN7n-{
         background-color: transparent;
         // Remove coloured banner
-        .settingsBanner-1eDJ5w{
+        .bannerSVGWrapper-qc0szY{
             display: none;
         }
 
         .userInfo-regn9W{
-            height: calc(64px + 8px);
+            height: 68px;
             padding: 16px 16px 0 calc(64px + 16px);
             margin: 8px 0;
         }
         // Avatar
         .avatar-3mTjvZ{
-            width: 64px !important;
-            height: 64px !important;
-            top: 0;
+            width: 64px !important; // Override inline
+            height: 64px !important; // Override inline
+            top: 8px;
             left: 0;
             border: 2px solid #000;
             svg{
+                width: unset !important; // Override inline
+                height: unset !important; // Override inline
                 foreignobject{
-                    mask: unset;
+                    width: 64px !important; // Override inline
+                    height: 64px !important; // Override inline
+                    mask: unset !important;
                 }
                 rect{
                     display: none;
@@ -78,12 +82,12 @@
                 }
 
                 // Override the reveal button
-                .button-f2h6uQ.lookLink-15mFoz{
+                .button-ejjZWC.lookLink-13iF2K{
                     min-width: unset;
                     padding: 0 0 0 4px;
                     background-color: unset;
                     border: unset;
-                    .contents-3ca1mk{
+                    .contents-3NembX{
                         color: $AccentLight3;
                         &:hover{
                             text-decoration: underline;
@@ -121,7 +125,7 @@
                 // border: 1px solid red;
                 margin-top: 8px;
                 > div{
-                    > h5{
+                    > h3{
                         margin: 0;
                         padding: 16px 16px 4px 16px;
                         background-color: $CardBackgroundFillColorDefault;
@@ -147,7 +151,7 @@
                         justify-content: flex-end;
                         .flexChild-3PzYmX{
                             margin-right: 0;
-                            flex: unset !important;
+                            flex: unset !important; // Override inline
                         }
                     }
 
@@ -195,12 +199,44 @@
             }
         }
     }
-
     // 2FA backup codes
     .backupCode-QOE1Yz{
         .checked-1pZh2h{
             color: $ControlFillColorDisabled;
             text-decoration: line-through;
+        }
+    }
+
+    // User profile
+    // About me
+    .channelTextArea-1VQBuV{
+        .bioTextArea-dDGOeC{
+            height: auto;
+            background-color: $ControlFillColorDefault;
+            border: 1px solid;
+            border-bottom-width: 2px;
+            border-color: $ControlStrokeColorDefault;
+            border-radius: 4px;
+            // Set a static emoji icon
+            .emojiButton-3FRTuj{
+                margin: 0 4px 0 0;
+                &::before{
+                    content: "\E76E"; //Emoji2
+                    color: $TextFillColorSecondary;
+                    @include FontIconFluent;
+                    font-size: 16px;
+                }
+                &.emojiButtonHovered-s44uQ8::before{
+                    color: $TextFillColorPrimary;
+                }
+                .contents-3NembX{
+                    display: none;
+                }
+            }
+        }
+        .characterCount-8yNPfb{
+            top: -24px;
+            bottom: unset;
         }
     }
 
@@ -258,15 +294,15 @@
 
     // Connections
     // List of services
-    .accountList-Wii_T5{
+    .connectContainer-1hylYM{
         background-color: $SystemFillColorAttentionBackground;
         border: 1px solid $CardStrokeColorDefault;
-        // Hide redundant header
-        h5{
-            display: none;
+        // Header
+        .connectHeader-2VkFiv{
+            @include TypeBodyStrong;
         }
         // Account button
-        .accountBtnInner-3ttD-i{
+        .accountButtonInner-33vCDY{
             background-color: $ControlFillColorDefault;
             border: 1px solid $ControlStrokeColorDefault;
             &:hover{
@@ -306,6 +342,10 @@
         .title-2dsDLn{
             @include TypeBody;
         }
+        .integration-1qC-fv{
+            background-color: $SystemFillColorAttentionBackground;
+            border: 1px solid $CardStrokeColorDefault;
+        }
     }
 
     // Privacy & Safety
@@ -341,6 +381,14 @@
         border: 1px solid $CardStrokeColorDefault;
         .previewMessage-2g_aBv{
             background-color: $LayerFillColorDefault;
+        }
+    }
+
+    // Voice & Video
+    .userSettingsVoice-1fEtsL{
+        // Fixes no spacing between video background and advanced sections
+        .title-3hptVQ.marginBottom20-315RVT{
+            margin-top: 24px;
         }
     }
 
@@ -408,5 +456,20 @@
     .children-1xdcWE > .defaultKeybind-1rEiTa{
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 4px;
+    }
+
+    // Registered games
+    // Active game
+    .activeGame-1OdxzI{
+        &.notDetected-M3Ghh2{
+            background-color: $SystemFillColorAttentionBackground;
+            border: 1px solid $CardStrokeColorDefault;
+            border-radius: 4px;
+        }
+    }
+    .nowPlayingAdd-3I4RbE{
+        button{
+            margin-left: 4px;
+        }
     }
 }
